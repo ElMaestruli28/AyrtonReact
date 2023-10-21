@@ -40,6 +40,6 @@ export default function Pilotos() {
     </div>
     </section>
   </div>
-  )
-}
+  );
+};
 
