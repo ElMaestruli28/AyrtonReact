@@ -1,0 +1,50 @@
+{"about-us": {
+    "title": "About Us",
+    "subtitle": "Get to the next level with our personalized services for kart racing"
+},
+"titles":{
+    "one": "About Us",
+    "two": "Drivers"
+},
+"header":{
+    "title1":"Taking you",
+    "title2":"to the",
+    "title3":"first place",
+    "button1":"Contact Us",
+    "button2":"Alfano Forum"
+},
+"drivers":{
+    "title":"Our Drivers"
+},
+"partners":{
+    "title":"Partners"
+},
+"sidebar":{
+    "title":"Social Media",
+    "contact":"Contact Us",
+    "news":"News",
+    "about-us":"About Us",
+    "drivers":"Drivers",
+    "partners":"Partners",
+    "alfano-support":"Alfano Support"
+},
+"AboutUs":{
+    "button1":"Data Acquisition",
+    "button2":"Teams and Drivers’ Coaching",
+    "button3":"Racing Telemetry Services",
+    "subtitle1":"Racing car and kart setup and development",
+    "subtitle2":"Performance improvement plan and Onboard videos analysis",
+    "subtitle3":"Real-time aquisition, analysis, and improvement",
+    "popover1":"RACERS",
+    "popover2":"WINS",
+    "popover3":"TEAMS",
+    "popover4":"CITY",
+    "value1":"15+",
+    "value2":"20+",
+    "value3":"5+",
+    "value4":"BUENOS AIRES"
+},
+"footer":{
+    "contact":"Contact"
+}
+}

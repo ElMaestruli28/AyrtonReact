@@ -1,0 +1,51 @@
+{
+    "about-us": {
+        "title": "Sobre Nosotros",
+        "subtitle": "Te podemos llevar a otro nivel con nuestros servicios personalizados para el karting."
+    },
+    "titles":{
+        "one": "¿Qué hacemos?",
+        "two": "Pilotos"
+    },
+    "header":{
+        "title1":"LLEVA A TU",
+        "title2":"EQUIPO AL",
+        "title3":"SIGUIENTE NIVEL",
+        "button1":"Contáctame",
+        "button2":"Foro Alfano"
+    },
+    "drivers":{
+        "title":"Nuestros Pilotos"
+    },
+    "partners":{
+        "title":"Socios"
+    },
+    "sidebar":{
+        "title":"Redes Sociales",
+        "contact":"Contacto",
+        "news":"Noticias",
+        "about-us":"Sobre Nosotros",
+        "drivers":"Pilotos",
+        "partners":"Socios",
+        "alfano-support":"Soporte Alfano"
+    },
+    "AboutUs":{
+        "button1":"Adquisición de Datos",
+        "button2":"Coaching para pilotos y equipos",
+        "button3":"Servicios de Telemetría",
+        "subtitle1":"Desarrollo y Puesta a Punto de Vehiculos de Competición",
+        "subtitle2":"Mejora del Rendimiento y Análisis de Videos On Board",
+        "subtitle3":"Medición y Modificación en Tiempo Real",
+        "popover1":"PILOTOS",
+        "popover2":"VICTORIAS",
+        "popover3":"EQUIPOS",
+        "popover4":"LOCALIDAD",
+        "value1":"15+",
+        "value2":"20+",
+        "value3":"5+",
+        "value4":"BUENOS AIRES"
+    },
+    "footer":{
+        "contact":"Contacto"
+    }
+}

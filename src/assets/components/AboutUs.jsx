@@ -6,20 +6,11 @@ import {
   } from "@material-tailwind/react";
 
   import Foto from "../images/backgroundImages/2.webp"
+  import { useTranslation } from "react-i18next";
 
 export default function AboutUs() {
-    const links = [
-        { name: 'Adquisición de Datos', subtitle: 'Desarrollo y Puesta a Punto de Vehiculos de Competición' },
-        { name: 'Coaching para pilotos y equipos', subtitle: 'Mejora del Rendimiento y Análisis de Videos On Board' },
-        { name: 'Servicios de Telemetría', subtitle: 'Medición y Modificación en Tiempo Real' },
-      ]
-      const stats = [
-        { name: 'PILOTOS', value: '15+' },
-        { name: 'VICTORIAS', value: '20+' },
-        { name: 'EQUIPOS', value: '5+' },
-        { name: 'LOCALIDAD', value: 'BUENOS AIRES' },
-      ]
-    
+      const [t] = useTranslation("global")
+      
     return (
       <div className="relative isolate overflow-hidden py-24 sm:py-32">
         <img
@@ -53,36 +44,70 @@ export default function AboutUs() {
         </div>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">Sobre Nosotros</h2>
+            <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">{t("about-us.title")}</h2>
             <p className="mt-6 text-lg leading-8 text-gray-200">
-              Te podemos llevar a otro nivel con nuestros servicios 100% personalizados para el Karting. <br /> #TakingYouToTheFirstPlace
+            {t("about-us.subtitle")} <br /> #TakingYouToTheFirstPlace
             </p>
           </div>
-          <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-            <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
-              {links.map((link) => (
+          <div className="grid mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-5xl">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white">
                 <Popover
-                key={link.name} 
-                animate={{
+                  animate={{
                     mount: { scale: 1, y: 0 },
                     unmount: { scale: 0, y: 25 },
-                  }}>
-                    <PopoverHandler>
-                        <Button className="bg-am text-black">{link.name}</Button>
-                    </PopoverHandler>
-                    <PopoverContent className="text-gray-perfect">
-                        {link.subtitle}
-                    </PopoverContent>
+                  }}
+                >
+                  <PopoverHandler>
+                    <Button className="bg-am text-black">{t("AboutUs.button1")}</Button>
+                  </PopoverHandler>
+                  <PopoverContent className="text-gray-perfect">
+                    {t("AboutUs.subtitle1")}
+                  </PopoverContent>
                 </Popover>
-              ))}
-            </div>
+                <Popover
+                  animate={{
+                    mount: { scale: 1, y: 0 },
+                    unmount: { scale: 0, y: 25 },
+                  }}
+                >
+                  <PopoverHandler>
+                    <Button className="bg-am text-black"> {t("AboutUs.button2")} </Button>
+                  </PopoverHandler>
+                  <PopoverContent className="text-gray-perfect">
+                    {t("AboutUs.subtitle2")}
+                  </PopoverContent>
+                </Popover>
+                <Popover
+                  animate={{
+                    mount: { scale: 1, y: 0 },
+                    unmount: { scale: 0, y: 25 },
+                  }}
+                >
+                  <PopoverHandler>
+                    <Button className="bg-am text-black">{t("AboutUs.button3")}</Button>
+                  </PopoverHandler>
+                  <PopoverContent className="text-gray-perfect">
+                    {t("AboutUs.subtitle3")}
+                  </PopoverContent>
+                </Popover>
+              </div>
             <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
-              {stats.map((stat) => (
-                <div key={stat.name} className="flex flex-col-reverse">
-                  <dt className="text-base leading-7 text-gray-300">{stat.name}</dt>
-                  <dd className="text-2xl font-bold leading-9 tracking-tight text-white">{stat.value}</dd>
+                <div className="flex flex-col-reverse">
+                  <dt className="text-base leading-7 text-gray-300">{t("AboutUs.popover1")}</dt>
+                  <dd className="text-2xl font-bold leading-9 tracking-tight text-white">15+</dd>
                 </div>
-              ))}
+                <div className="flex flex-col-reverse">
+                  <dt className="text-base leading-7 text-gray-300">{t("AboutUs.popover2")}</dt>
+                  <dd className="text-2xl font-bold leading-9 tracking-tight text-white">20+</dd>
+                </div>
+                <div className="flex flex-col-reverse">
+                  <dt className="text-base leading-7 text-gray-300">{t("AboutUs.popover3")}</dt>
+                  <dd className="text-2xl font-bold leading-9 tracking-tight text-white">5+</dd>
+                </div>
+                <div className="flex flex-col-reverse">
+                  <dt className="text-base leading-7 text-gray-300">{t("AboutUs.popover4")}</dt>
+                  <dd className="text-2xl font-bold leading-9 tracking-tight text-white">BUENOS AIRES</dd>
+                </div>
             </dl>
           </div>
         </div>

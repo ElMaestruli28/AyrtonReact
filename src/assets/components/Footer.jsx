@@ -1,6 +1,9 @@
 import { Typography } from "@material-tailwind/react";
+import { useTranslation } from "react-i18next";
  
 export default function Footer() {
+  const [t] = useTranslation("global")
+
   return (
     <footer className="flex w-full flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 bg-black text-white py-6 px-6 text-center md:justify-between">
       <Typography className="font-normal uppercase">
@@ -40,7 +43,7 @@ export default function Footer() {
             href="https://wa.me/541149730446"
             className="font-normal transition-colors"
           >
-            Contacto
+            {t("footer.contact")}
           </Typography>
         </li>
       </ul>

@@ -52,7 +52,7 @@ export default function Sidebar() {
         </div>
         <List>
           <hr className="my-2 border-blue-gray-50" />
-          <ListItem>
+          <ListItem className="hover:bg-discord">
             <ListItemPrefix>
               <PhoneIcon className="h-5 w-5" />
             </ListItemPrefix>
@@ -60,7 +60,7 @@ export default function Sidebar() {
               <a href="https://wa.me/541149730446">Contacto</a>
             </Typography>
           </ListItem>
-          <ListItem>
+          <ListItem className="hover:bg-discord">
             <ListItemPrefix>
               <NewspaperIcon className="h-5 w-5" />
             </ListItemPrefix>
@@ -74,7 +74,7 @@ export default function Sidebar() {
               Noticias
             </a>
           </ListItem>
-          <ListItem>
+          <ListItem className="hover:bg-discord">
             <ListItemPrefix>
               <WrenchScrewdriverIcon className="h-5 w-5" />
             </ListItemPrefix>

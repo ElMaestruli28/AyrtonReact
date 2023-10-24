@@ -11,6 +11,7 @@ import Img4 from 'C:/Users/tiago/OneDrive/Escritorio/Paginas/Pagina 9 (AyrtonRea
 import Img5 from 'C:/Users/tiago/OneDrive/Escritorio/Paginas/Pagina 9 (AyrtonReact)/AyrtonReact/src/assets/images/Logos/5.webp';
 import Img6 from 'C:/Users/tiago/OneDrive/Escritorio/Paginas/Pagina 9 (AyrtonReact)/AyrtonReact/src/assets/images/Logos/6.webp';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { useTranslation } from 'react-i18next';
 
 SwiperCore.use([Autoplay, Pagination]);
 
@@ -24,12 +25,14 @@ const Partners = () => {
     { imagen: Img6 },
   ];
 
+  const [t] = useTranslation("global")
+
   const Base = ({ imagen }) => {
     return (
       <div className='h-full bg-black'>
         <div className='w-full border-t-2 border-white'>
           <h1 className='relative font-oswald font-semibold py-10 text-4xl uppercase text-center tracking-tight text-white top-2/4 left-0 right-0 max-md:text-3xl'>
-            Socios
+            {t("partners.title")}
           </h1>
         </div>
         <Swiper

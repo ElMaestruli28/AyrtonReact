@@ -24,6 +24,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 
 
@@ -32,7 +33,7 @@ export default function Sidebar() {
   const [backgroundOpen, setBackgroundOpen] = useState(false);
   const [accordionOpen, setAccordionOpen] = useState(false);
 
-
+  const [t] = useTranslation("global")
 
   const handleClick = (event, targetId) => {
     event.preventDefault();
@@ -75,7 +76,7 @@ export default function Sidebar() {
         </div>
         <List>
         <Accordion open={accordionOpen === 1}>
-  <ListItem className="p-0" selected={open === 1}>
+  <ListItem className="p-0 hover:bg-discord" selected={open === 1}>
     <AccordionHeader
       onClick={() => setAccordionOpen(accordionOpen === 1 ? false : 1)} // Toggle the accordionOpen state when the header is clicked
       className="border-b-0 p-3"
@@ -84,7 +85,7 @@ export default function Sidebar() {
         <UserCircleIcon className="h-5 w-5" />
       </ListItemPrefix>
       <Typography color="blue-gray" className="mr-auto font-normal text-white hover:text-am">
-        Redes Sociales
+      {t("sidebar.title")}
       </Typography>
       <ChevronDownIcon
         strokeWidth={2.5}
@@ -93,10 +94,10 @@ export default function Sidebar() {
         }`}
       />
     </AccordionHeader>
-  </ListItem>
+  </ListItem >
             <AccordionBody className="py-1">
               <List className="p-0">
-                <ListItem>
+                <ListItem className="hover:bg-discord">
                   <ListItemPrefix>
                     <FontAwesomeIcon icon={faInstagram} strokeWidth={5} className="h-5 w-5" />
                   </ListItemPrefix>
@@ -110,7 +111,7 @@ export default function Sidebar() {
                     Instagram
                   </a>
                 </ListItem>
-                <ListItem>
+                <ListItem className="hover:bg-discord">
                   <ListItemPrefix>
                     <FontAwesomeIcon icon={faLinkedin} strokeWidth={5} className="h-5 w-5" />
                   </ListItemPrefix>
@@ -124,7 +125,7 @@ export default function Sidebar() {
                     Linkedin
                   </a>
                 </ListItem>
-                <ListItem>
+                <ListItem className="hover:bg-discord">
                   <ListItemPrefix>
                     <FontAwesomeIcon icon={faWhatsapp} strokeWidth={5} className="h-5 w-5" />
                   </ListItemPrefix>
@@ -143,15 +144,15 @@ export default function Sidebar() {
           </Accordion>
 
           <hr className="my-2 border-blue-gray-50" />
-          <ListItem>
+          <ListItem className="hover:bg-discord">
             <ListItemPrefix>
               <PhoneIcon className="h-5 w-5" />
             </ListItemPrefix>
             <Typography color="blue-gray" className="text-white hover:text-am">
-              <a href="https://wa.me/541149730446">Contacto</a>
+              <a href="https://wa.me/541149730446">{t("sidebar.contact")}</a>
             </Typography>
           </ListItem>
-          <ListItem>
+          <ListItem className="hover:bg-discord">
             <ListItemPrefix>
               <NewspaperIcon className="h-5 w-5" />
             </ListItemPrefix>
@@ -162,10 +163,10 @@ export default function Sidebar() {
               color="blue-gray"
               className="text-white hover:text-am"
             >
-              Noticias
+              {t("sidebar.news")}
             </a>
           </ListItem>
-          <ListItem>
+          <ListItem className="hover:bg-discord">
             <ListItemPrefix>
               <QuestionMarkCircleIcon className="h-5 w-5" />
             </ListItemPrefix>
@@ -175,10 +176,10 @@ export default function Sidebar() {
                 color="blue-gray"
                 className="text-white scroll-smooth hover:text-am"
               >
-              Sobre Nosotros
+              {t("sidebar.about-us")}
             </a>
           </ListItem>
-          <ListItem>
+          <ListItem className="hover:bg-discord">
             <ListItemPrefix>
               <UserGroupIcon className="h-5 w-5" />
             </ListItemPrefix>
@@ -188,10 +189,10 @@ export default function Sidebar() {
               color="blue-gray"
               className="text-white hover:text-am"
             >
-              Pilotos
+              {t("sidebar.drivers")}
             </a>
           </ListItem>
-          <ListItem>
+          <ListItem className="hover:bg-discord">
             <ListItemPrefix>
               <UsersIcon className="h-5 w-5" />
             </ListItemPrefix>
@@ -201,10 +202,10 @@ export default function Sidebar() {
               color="blue-gray"
               className="text-white hover:text-am"
             >
-              Socios
+              {t("sidebar.partners")}
             </a>
           </ListItem>
-          <ListItem>
+          <ListItem className="hover:bg-discord">
             <ListItemPrefix>
               <WrenchScrewdriverIcon className="h-5 w-5" />
             </ListItemPrefix>
@@ -213,7 +214,7 @@ export default function Sidebar() {
               color="blue-gray"
               className="text-white hover:text-alfano"
             >
-              Soporte Alfano
+              {t("sidebar.alfano-support")}
             </Link>
             </ListItem>
         </List>
